@@ -1,11 +1,11 @@
-var mykey = config.MY_KEY;
+//var mykey = config.MY_KEY;
 
 function fetchData() {
    fetch("https://covid-193.p.rapidapi.com/statistics?country=philippines",{
     "method":"GET",
     "headers" : {
       "x-rapidapi-host": "covid-193.p.rapidapi.com",
-      "x-rapidapi-key":mykey
+      "x-rapidapi-key":MY_KEY
     }
   }
   ).then(response => {
