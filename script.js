@@ -72,7 +72,7 @@ function fetchData() {
   ).then(response => {
     return response.json()
   }).then(data => {
-     console.log(data.response);
+    //  console.log(data.response);
     const html = data.response.map(user =>{
       return `
       <div class="container ">
@@ -106,10 +106,13 @@ function fetchData() {
     <h2 class="text-center">Total Deaths</h2>
     <h3 class="text-center">${user.deaths.total}</h3>
     </div>
+    <div class="col-sm bg-danger">
+    <h2 class="text-center">Total Deaths</h2>
+    <h3 class="text-center">${user.deaths.total}</h3>
+    </div>
    
   </div>
 </div>
-
 
       `;
     }).join('')
@@ -172,6 +175,7 @@ function fetchData() {
     <h3 class="text-center">${user.deaths.total}</h3>
     </div>
    
+   
   </div>
 </div>
 
@@ -198,7 +202,7 @@ function fetchGlobalData() {
   ).then(response => {
     return response.json()
   }).then(data => {
-     console.log(data.response[0]);
+    //  console.log(data.response[0]);
      const html = data.response.map(user =>{
        return `
        <div class="container ">
